@@ -1,4 +1,5 @@
 **PLAYERUNKNOWN'S BATTLEGROUNDS SERVERS PING**
 ---
-Feel free to contribute, create issues and other!
-http://pubg.disquse.ru
+A simple tool to test the ping of PUBG servers adapted for ReactionGaming.us
+
+forked from Disquse/PUBGServersPing
