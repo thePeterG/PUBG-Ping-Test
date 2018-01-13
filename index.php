@@ -33,6 +33,7 @@ if  ( $page == 'index' ) {
 if ($page == 'sendfeedback') { include('pages/sendfeedback.php'); }
 if ($page == 'loadfeedbacks') { include('pages/loadfeedbacks.php'); }
 elseif ($language == 'en') { include('pages/en.php'); }
+elseif ($page == 'index') { include('pages/en.php'); }
 else { include('pages/error.php'); }
 
 
@@ -42,7 +43,7 @@ function head() {
 	<!DOCTYPE html>
 	<html>
 	<head>
-		<title>PUBG Ping Tester</title>
+		<title>PUBG Servers Ping</title>
 		<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.98.2/css/materialize.min.css">
 		<link rel="shortcut icon" href="images/favicon.ico" type="image/x-icon">
