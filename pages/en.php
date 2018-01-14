@@ -3,7 +3,7 @@
 <div class="container row">
 	<br><div class="col s12 m10 l10 offset-m1 offset-l1">
         <div class="card-panel" style="padding: 18px;">
-			<center><a href="https://reactiongaming.us/img/g2a.png"><img src="https://www.g2a.com/r/reactiongaming"></a</center><br><div style="margin-bottom: 10px" class="divider"></div>
+			<center><a href="https://www.g2a.com/r/reactiongaming"><img src="https://reactiongaming.us/img/g2a.png"></a</center><br><div style="margin-bottom: 10px" class="divider"></div>
 			<center>
 				<a style="background-color: rgba(0,0,0,0.05)" onclick="selectAll()" class="topbutton waves-effect waves-orange btn-flat">Check all</a>
 				<a style="background-color: rgba(0,0,0,0.05)" onclick="unselectAll()" class="topbutton waves-effect waves-orange btn-flat">Uncheck all</a>
