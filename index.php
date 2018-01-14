@@ -43,7 +43,7 @@ function head() {
 	<!DOCTYPE html>
 	<html>
 	<head>
-		<title>PUBG Servers Ping</title>
+		<title>PUBG Server Ping</title>
 		<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.98.2/css/materialize.min.css">
 		<link rel="shortcut icon" href="images/favicon.ico" type="image/x-icon">
