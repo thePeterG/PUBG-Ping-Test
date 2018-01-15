@@ -30,6 +30,8 @@ if  ( $page == 'index' ) {
 	$language = $page;
 }
 
+if ($page == 'sendfeedback') { include('pages/sendfeedback.php'); }
+if ($page == 'loadfeedbacks') { include('pages/loadfeedbacks.php'); }
 elseif ($language == 'en') { include('pages/en.php'); }
 elseif ($page == 'index') { include('pages/en.php'); }
 else { include('pages/error.php'); }
@@ -95,15 +97,6 @@ function head() {
 				text-align: center;
 			}
 		</style>
-            <!-- Global site tag (gtag.js) - Google Analytics -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=UA-73662144-1"></script>
-<script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
-
-  gtag('config', 'UA-73662144-1');
-</script>
 	</head>
 	<body>
 	<div id="preloader"><div class="spinner"><div class="preloader-wrapper big active"><div class="spinner-layer spinner-orange-only"><div class="circle-clipper left"><div class="circle"></div></div><div class="gap-patch"><div class="circle"></div></div><div class="circle-clipper right"><div class="circle"></div></div></div></div></div></div>';
