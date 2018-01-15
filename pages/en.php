@@ -144,23 +144,13 @@
 			
 			<ul id='langdropdown' class='dropdown-content'>
 				<li><a href="/en">English</a></li>
-                <li class="divider"></li>
-				<li><a href="/ru">Русский</a></li>
-				<li class="divider"></li>
-				<li><a href="/es">Español</a></li>
-				<li class="divider"></li>
-				<li><a href="/fr">Français</a></li>
-				<li class="divider"></li>
-				<li><a href="/cn">中文</a></li>
-                <li class="divider"></li>
-                <li><a href="/vi">Vietnamese</a></li>
 			</ul>
   
 			<div id="modalinfo" class="modal modal-fixed-footer">
 				<div class="modal-content">
-					<h4>Help</h4><div class="divider"></div>
+					<h4>FAQ</h4><div class="divider"></div>
 					<br>
-					<b>Sorry for my english! If you have any ideas how to improve this site - use form below! Only Russian and English language!</b>
+					<b>Frequently Asked Questions</b>
 					<div class="row">
 						<div id="feedbackdiv" class="input-field col s9">	
 							<textarea id="feedbackarea" class="materialize-textarea" length="500"></textarea>
@@ -448,7 +438,7 @@
 		} else {
 			savefeedback(feedbacktext);
 			$( "#feedbackdiv" ).fadeOut("slow", function() {
-				document.getElementById('feedbackdiv').innerHTML = "<center><h5>Thanks!</h5>We're saved your feedback!</center><br>";
+				document.getElementById('feedbackdiv').innerHTML = "<center><h5>Thanks!</h5>We saved your feedback!</center><br>";
 				$( "#feedbackdiv" ).fadeIn("slow", function() {
 					setTimeout(function() {
 						$( "#feedbackdiv" ).fadeOut( "slow", function() {
