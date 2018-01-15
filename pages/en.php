@@ -168,16 +168,10 @@
 						</div>
 						<div class="col s3"><a onclick="sendfeedback();" style="height: 100px; padding-top: 23%;" class="waves-effect waves-orange btn-flat">Отправить</a></div>
 					</div>
-					<p><b>Sources</b> - You can check site's sources on <a href="https://github.com/Disquse/PUBGServersPing">GitHub</a>. Before using, read license! Feel free to contribute, report issues and other!</p>
-					<p><b>I have good ping, but I'm lagging</b> - Main problem of PUBG servers is not ping. Game servers just overloaded, that's why you lagging. You can try play on another servers. Big ping is much smaller problem that overloaded servers. Unfortunately, we can't check servers load...</p>
-					<p><b>Why?</b> - There is really hard to check your ping to PUBG servers. You can't check it directly from a game.</p>
-					<p><b>How this works?</b> - This site sends http request to all AWS servers that PUBG use. This is client-side, so latency should be correct.</p>
-					<p><b>Sorting?</b> - Press to column header to sort. Use it after ping test.</p>
-					<p><b>Who is this for?</b> - For PUBG players, Banda and rabotyag <i><3</i></p>
-					<p><b>How to contact you?</b> - You can check in on my main site: <a href="http://disquse.ru">disquse.ru</a></p>
-					<p><b>Thanks to:</b><br><a href="https://github.com/nino6454">nino6454</a> for Spanish translation</p>
-					<p><a href="https://github.com/Cethiel">Cethiel</a> for French translation</p>
-					<p><a href="https://github.com/ngocnh">NgocNH</a> for Vietnamese translation</p>
+					<p><b>I have a low ping, but I'm still lagging.</b> - The main source of lag inPUBG servers is not always your ping. Game servers can become overloaded when too many players are in-game and the host servers cannot keep up with demand. If there is server overload, you may experience lag. If it is severe, you can exit and join a new lobby. There are no tools to check servers load.</p>
+					<p><b>What is this tool for?</b> - Currently, there is no way to see your ping in game. This feature may be included in future updates of the game</p>
+					<p><b>How does this ping toolworks?</b> - This site sends http request to all AWS servers currently used by PUBG. This is client-side request, so latency numbers should be correct.</p>
+					<p><b>How to contact you?</b> - Visti ReactionGaming.us and hit the contact button. <a href="http://reactiongaming.us/community/">ReactionGaming</a></p>
 				</div>
 				<div class="modal-footer">
 					<a class="modal-action modal-close waves-effect waves-orange btn-flat">Close</a>
@@ -186,7 +180,7 @@
 			<div id="modalservers" class="modal modal-fixed-footer">
 				<div class="modal-content">
 					<h4>List of all AWS servers</h4><div class="divider"></div>
-					AWS (Amazon Web Services) - this company provides PUBG servers. Not all of them uses in a game, but there is full Server - IP list. Maybe this info can be useful for you:<br><br>
+					AWS (Amazon Web Services) - Amazon provides the backend for PUBG servers. All IPs listed may not be used for game lobbies but are registered to Bluehole . This is included just for reference.<br><br>
 					
 					<?php echo(file_get_contents("pages/servers.html")); ?>
 				</div>
@@ -481,7 +475,7 @@
 			let boxid = box.id;
 			setCookie('region'+index, document.getElementById('ch_'+boxid).checked, 30);
 		});
-		Materialize.toast('Your settings was saved', 2000);
+		Materialize.toast('Your settings were saved', 2000);
 	}
 	
 	function loadSettings() {
