@@ -30,8 +30,6 @@ if  ( $page == 'index' ) {
 	$language = $page;
 }
 
-if ($page == 'sendfeedback') { include('pages/sendfeedback.php'); }
-if ($page == 'loadfeedbacks') { include('pages/loadfeedbacks.php'); }
 elseif ($language == 'en') { include('pages/en.php'); }
 elseif ($page == 'index') { include('pages/en.php'); }
 else { include('pages/error.php'); }
