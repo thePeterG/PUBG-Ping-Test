@@ -139,12 +139,7 @@
 				<a class="orange waves-effect waves-light btn tooltipped pulse" data-position="top" data-delay="50" data-tooltip="Measure your ping" type="submit" id="pingbutton" onclick="Materialize.toast('Checking your ping', 3500)">Ping</a>
 				<a class="orange waves-effect waves-light btn tooltipped" href="#modalinfo" data-position="top" data-delay="50" data-tooltip="Read F.A.Q.">Help</a>
 				<a class="orange waves-effect waves-light btn tooltipped" href="#modalservers" data-position="top" data-delay="50" data-tooltip="List of all AWS servers">List</a>
-				<a class='dropdown-button orange waves-effect waves-light btn tooltipped' data-position="top" data-delay="50" data-tooltip="Change language" href='#' data-activates='langdropdown'>Language</a>
 			</center>
-			
-			<ul id='langdropdown' class='dropdown-content'>
-				<li><a href="/en">English</a></li>
-			</ul>
   
 			<div id="modalinfo" class="modal modal-fixed-footer">
 				<div class="modal-content">
@@ -152,12 +147,6 @@
 					<br>
 					<b>Frequently Asked Questions</b>
 					<div class="row">
-						<div id="feedbackdiv" class="input-field col s9">	
-							<textarea id="feedbackarea" class="materialize-textarea" length="500"></textarea>
-							<label style="top: 4px; left: 16px" for="feedbackarea">Text...</label>
-						</div>
-						<div class="col s3"><a onclick="sendfeedback();" style="height: 100px; padding-top: 23%;" class="waves-effect waves-orange btn-flat">Contact</a></div>
-					</div>
 					<p><b>I have a low ping, but I'm still lagging.</b> - The main source of lag inPUBG servers is not always your ping. Game servers can become overloaded when too many players are in-game and the host servers cannot keep up with demand. If there is server overload, you may experience lag. If it is severe, you can exit and join a new lobby. There are no tools to check servers load.</p>
 					<p><b>What is this tool for?</b> - Currently, there is no way to see your ping in game. This feature may be included in future updates of the game</p>
 					<p><b>How does this ping toolworks?</b> - This site sends http request to all AWS servers currently used by PUBG. This is client-side request, so latency numbers should be correct.</p>
