@@ -1,1 +1,225 @@
 
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1.0"/>
+  <title>PUBG Ping Test</title>
+
+  <!-- CSS  -->
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+  <link href="css/materialize.css" type="text/css" rel="stylesheet" media="screen,projection"/>
+  <link href="css/style.css" type="text/css" rel="stylesheet" media="screen,projection"/>
+</head>
+<body>
+	  <!-- NAVBAR  -->
+    <nav class="transparent z-depth-0">
+     <div class="nav-wrapper">  
+        <a href="index.html" class="brand-logo left"><img class="responsive-img" id="logo" src="images/logo.png" alt="ReactionGaming"/></a>  
+        <ul id="nav-mobile" class="right">  
+             <li><a href="https://reactiongaming.us/community/">Forum</a></li>  
+             <li><a href="badges.html">Discord</a></li> 
+        </ul>  
+    </div>  
+  </nav>  
+    <!-- TITLE BLOCK  -->
+  <div class="section no-pad-bot" id="index-banner">
+    <div class="container">
+      <br><br>
+      <div class="row center">
+      <img src="images/pglogo.png" alt="PUBG" class="responsive-img"/>
+     </div>
+      <div class="row center">
+        <h5 class="header col s12">A SIMPLE TOOL TO TEST YOUR CONNECTION TO PUBG</h5>
+      </div>
+      <br><br>
+    </div>
+  </div>
+      <!--   Selection Section   -->
+   <div class="container">
+    <div class="section">
+      <div class="ping-buttons">
+        <div class="col s12">
+             <a onclick="selectAll()" class=" red waves-effect waves-light btn"><i class="material-icons left">check</i>Check All</a>
+             <a onclick="unselectAll()" class=" red waves-effect waves-light btn"><i class="material-icons left">check_box_outline_blank</i>Uncheck All</a>
+            <a onclick="clearAllLatency()" class=" red waves-effect waves-light btn"><i class="material-icons left">remove_circle_outline</i>Clear All</a> 
+          <a class=" red dropdown-button btn" href="#!" data-target="dropdown1">Region<i class="material-icons left">arrow_drop_down_circle</i></a></li>
+          <ul id="dropdown1" class="dropdown-content">
+                <li><a onclick="selectAmerica()">America</a></li>
+                <li><a onclick="selectEurope()">Europa</a></li>
+                <li><a onclick="selectAsia()">Asia</a></li>
+         </ul>
+         </div>
+       </div>  
+     </div>  
+   </div>  
+       <!--   Ping Results Section   -->
+        <div class="container">
+            <div class="section">
+            	<div class="row center">
+                  <div class="col s12">
+                  <div class="card opacity">
+            	  <table id="grid" class="highlight striped">
+                 <thead>
+                 <tr>
+                 <th style="width:20px" data-type="string">Check?</th>
+                 <th style="width:250px" data-type="string">Server:</th>
+                 <th style="width:300px" data-type="number">Latency:</th>
+                 <th data-type="number">Average:</th>
+                 <th style="width:20px" data-type="number"></th>
+                 </tr>
+                 </thead>
+                   <tbody>	
+                   <tr>
+                   <td><input type="checkbox" id="ch_us-east-1" checked /><label style="top: 4px; left: 16px" for="ch_us-east-1"></label></td>
+                   <td>US-East (Virginia)</td>
+                   <td class="latency" id="us-east-1" endpoint="http://dynamodb.us-east-1.amazonaws.com/"></td>
+                   <td></td>
+                   <td><a onclick="checkButtonClicked(0)" class="waves-effect waves-orange btn-flat actionbutton">Check</a><a onclick="clearLatency(0)" class="waves-effect waves-orange btn-flat actionbutton">Clear</a></td>
+                   </tr>
+                   <tr>
+                   <td><input type="checkbox" id="ch_us-east-2" checked /><label style="top: 4px; left: 16px" for="ch_us-east-2"></label></td>
+                   <td>US East (Ohio)</td>
+                   <td class="latency" id="us-east-2" endpoint="http://dynamodb.us-east-2.amazonaws.com/"></td>
+                   <td></td>
+                   <td><a onclick="checkButtonClicked(1)" class="waves-effect waves-orange btn-flat actionbutton">Check</a><a onclick="clearLatency(1)" class="waves-effect waves-orange btn-flat actionbutton">Clear</a></td>
+                   </tr>
+                   <tr>
+                   <td><input type="checkbox" id="ch_us-west-1" checked /><label style="top: 4px; left: 16px" for="ch_us-west-1"></label></td>
+                   <td>US-West (California)</td>
+                   <td class="latency" id="us-west-1" endpoint="http://dynamodb.us-west-1.amazonaws.com/"></td>
+                   <td></td>
+                   <td><a onclick="checkButtonClicked(2)" class="waves-effect waves-orange btn-flat actionbutton">Check</a><a onclick="clearLatency(2)" class="waves-effect waves-orange btn-flat actionbutton">Clear</a></td>
+                   </tr>
+                   <tr>
+                   <td><input type="checkbox" id="ch_us-west-2" checked /><label style="top: 4px; left: 16px" for="ch_us-west-2"></label></td>
+                   <td>US-West (Oregon)</td>
+                   <td class="latency" id="us-west-2" endpoint="http://dynamodb.us-west-2.amazonaws.com/"></td>
+                   <td></td>
+                   <td><a onclick="checkButtonClicked(3)" class="waves-effect waves-orange btn-flat actionbutton">Check</a><a onclick="clearLatency(3)" class="waves-effect waves-orange btn-flat actionbutton">Clear</a></td>
+                   </tr>
+                   <tr>
+                   <td><input type="checkbox" id="ch_ca-central-1" checked /><label style="top: 4px; left: 16px" for="ch_ca-central-1"></label></td>
+                   <td>Canada (Central)</td>
+                   <td class="latency" id="ca-central-1" endpoint="http://dynamodb.ca-central-1.amazonaws.com/"></td>
+                   <td></td>
+                   <td><a onclick="checkButtonClicked(4)" class="waves-effect waves-orange btn-flat actionbutton">Check</a><a onclick="clearLatency(4)" class="waves-effect waves-orange btn-flat actionbutton">Clear</a></td>
+                   </tr>
+                   <tr>
+                   <td><input type="checkbox" id="ch_eu-west-1" checked /><label style="top: 4px; left: 16px" for="ch_eu-west-1"></label></td>
+                   <td>Europe (Ireland)</td>
+                   <td class="latency" id="eu-west-1" endpoint="http://dynamodb.eu-west-1.amazonaws.com/"></td>
+                   <td></td>
+                   <td><a onclick="checkButtonClicked(5)" class="waves-effect waves-orange btn-flat actionbutton">Check</a><a onclick="clearLatency(5)" class="waves-effect waves-orange btn-flat actionbutton">Clear</a></td>
+                   </tr>
+                   <tr>
+                   <td><input type="checkbox" id="ch_eu-west-2" checked /><label style="top: 4px; left: 16px" for="ch_eu-west-2"></label></td>
+                   <td>Europe (London)</td>
+                   <td class="latency" id="eu-west-2" endpoint="http://dynamodb.eu-west-2.amazonaws.com/"></td>
+                   <td></td>
+                   <td><a onclick="checkButtonClicked(6)" class="waves-effect waves-orange btn-flat actionbutton">Check</a><a onclick="clearLatency(6)" class="waves-effect waves-orange btn-flat actionbutton">Clear</a></td>
+                   </tr>
+                   <tr>
+                   <td><input type="checkbox" id="ch_eu-central-1" checked /><label style="top: 4px; left: 16px" for="ch_eu-central-1"></label></td>
+                   <td>Europe (Frankfurt)</td>
+                   <td class="latency" id="eu-central-1" endpoint="http://dynamodb.eu-central-1.amazonaws.com/"></td>
+                   <td></td>
+                   <td><a onclick="checkButtonClicked(7)" class="waves-effect waves-orange btn-flat actionbutton">Check</a><a onclick="clearLatency(7)" class="waves-effect waves-orange btn-flat actionbutton">Clear</a></td>
+                   </tr>
+                   <tr>
+                  <td><input type="checkbox" id="ch_ap-south-1" checked /><label style="top: 4px; left: 16px" for="ch_ap-south-1"></label></td>
+                  <td>Asia Pacific (Mumbai)</td>
+                 <td class="latency" id="ap-south-1" endpoint="http://dynamodb.ap-south-1.amazonaws.com/"></td>
+                 <td></td>
+                 <td><a onclick="checkButtonClicked(8)" class="waves-effect waves-orange btn-flat actionbutton">Check</a><a onclick="clearLatency(8)" class="waves-effect waves-orange btn-flat actionbutton">Clear</a></td>
+                 </tr>
+                 <tr>
+                <td><input type="checkbox" id="ch_ap-northeast-2" checked /><label style="top: 4px; left: 16px" for="ch_ap-northeast-2"></label></td>
+                <td>Asia Pacific (Seoul)</td>
+                <td class="latency" id="ap-northeast-2" endpoint="http://dynamodb.ap-northeast-2.amazonaws.com/"></td>
+                <td></td>
+                <td><a onclick="checkButtonClicked(9)" class="waves-effect waves-orange btn-flat actionbutton">Check</a><a onclick="clearLatency(9)" class="waves-effect waves-orange btn-flat actionbutton">Clear</a></td>
+                </tr>
+                <tr>
+                <td><input type="checkbox" id="ch_ap-southeast-1" checked /><label style="top: 4px; left: 16px" for="ch_ap-southeast-1"></label></td>
+                <td>Asia Pacific (Singapore)</td>
+                <td class="latency" id="ap-southeast-1" endpoint="http://dynamodb.ap-southeast-1.amazonaws.com/"></td>
+                <td></td>
+                <td><a onclick="checkButtonClicked(10)" class="waves-effect waves-orange btn-flat actionbutton">Check</a><a onclick="clearLatency(10)" class="waves-effect waves-orange btn-flat actionbutton">Clear</a></td>
+                </tr>
+                <tr>
+                <td><input type="checkbox" id="ch_ap-southeast-2" checked /><label style="top: 4px; left: 16px" for="ch_ap-southeast-2"></label></td>
+                <td>Asia Pacific (Sydney)</td>
+                <td class="latency" id="ap-southeast-2" endpoint="http://dynamodb.ap-southeast-2.amazonaws.com/"></td>
+                <td></td>
+                <td><a onclick="checkButtonClicked(11)" class="waves-effect waves-orange btn-flat actionbutton">Check</a><a onclick="clearLatency(11)" class="waves-effect waves-orange btn-flat actionbutton">Clear</a></td>
+                </tr>
+                <tr>
+                <td><input type="checkbox" id="ch_ap-northeast-1" checked /><label style="top: 4px; left: 16px" for="ch_ap-northeast-1"></label></td>
+                <td>Asia Pacific (Tokyo)</td>
+                <td class="latency" id="ap-northeast-1" endpoint="http://dynamodb.ap-northeast-1.amazonaws.com/"></td>
+                <td></td>
+                <td><a onclick="checkButtonClicked(12)" class="waves-effect waves-orange btn-flat actionbutton">Check</a><a onclick="clearLatency(12)" class="waves-effect waves-orange btn-flat actionbutton">Clear</a></td>
+                </tr>
+                <tr>
+                <td><input type="checkbox" id="ch_sa-east-1" checked /><label style="top: 4px; left: 16px" for="ch_sa-east-1"></label></td>
+                <td>South America (Sao Paulo)</td>
+                <td class="latency" id="sa-east-1" endpoint="http://dynamodb.sa-east-1.amazonaws.com/"></td>
+                <td></td>
+                <td><a onclick="checkButtonClicked(13)" class="waves-effect waves-orange btn-flat actionbutton">Check</a><a onclick="clearLatency(13)" class="waves-effect waves-orange btn-flat actionbutton">Clear</a></td>
+                </tr>
+                <tr>
+                <td><input type="checkbox" id="ch_cn-north-1" checked /><label style="top: 4px; left: 16px" for="ch_cn-north-1"></label></td>
+                <td>China (Beijing)</td>
+                <td class="latency" id="cn-north-1" endpoint="http://dynamodb.cn-north-1.amazonaws.com.cn/"></td>
+                <td></td>
+               <td><a onclick="checkButtonClicked(14)" class="waves-effect waves-orange btn-flat actionbutton">Check</a><a onclick="clearLatency(14)" class="waves-effect waves-orange btn-flat actionbutton">Clear</a></td>
+               </tr>
+               </tbody>
+               </table>
+         <div class="divider"></div>
+           <div id="imageCell"></div>
+           <br>
+               </div> 
+              </div>
+              </div>
+     
+     	<div class="row center">
+           <div class="col s12">
+     <a class="red waves-effect waves-light btn tooltipped pulse" data-position="top" data-delay="50" data-tooltip="Measure your ping" type="submit" id="pingbutton" onclick="Materialize.toast('Checking your ping', 3500)">Ping</a>
+           </div>
+         </div> 
+     </div>
+    </div>
+            	
+    <video autoplay loop id="bgvid" muted plays-inline>
+            <source src="mov/wg.mp4">
+     </video>
+    <br><br>
+  <!--   Footer   -->
+  <footer class="page-footer black">
+    <div class="container">
+      <div class="row center">
+       
+    <div class="footer-copyright">
+      <div class="container">
+      	
+      Thrown Together By <a class="red-text text-darken-3" href="https://reactiongaming.us">ReactionGaming</a> | Video Background by <a class="red-text text-darken-3" href="https://www.youtube.com/user/KingsterGames">The Sexual Milkman</a>
+      </div>
+    </div>
+  </footer>
+
+
+  <!--  Scripts-->
+  <script src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
+  <script src="js/materialize.js"></script>
+  <script src="js/init.js"></script>
+       <script type="text/javascript">
+     
+ 
+     
+     
+     </script>
+
+  </body>
+</html>
